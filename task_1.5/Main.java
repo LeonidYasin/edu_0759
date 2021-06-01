@@ -9,8 +9,16 @@ TF = (9 / 5) * TC + 32
 Пример вывода:
 105.8 */
 
+
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-       // Ваш код
+        System.out.println("Введите температуру по Цельсию");
+        Scanner scanner = new Scanner(System.in);
+        int tc = scanner.nextInt();
+        System.out.println("Температуру по Фаренгейту:");
+        System.out.println((9./ 5.) * tc + 32);
     }
 }
