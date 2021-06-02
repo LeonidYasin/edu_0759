@@ -11,9 +11,23 @@
 •	Текст в каждой строке должен быть уникален.
 •	Должны быть выведены все возможные комбинации. */
 
+
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
+
+
+        String string[] = {"Мама", "Мыла", "Раму"};
+        for (int i = 0; i <string.length;i++ ) {
+            for (int j = 0;  j < string.length;j++) {
+                for (int k = 0; k < string.length ;k++) {
+                    if (i!=j && j!=k && k!=i )
+                        System.out.println(string[i] + string[j] + string[k]);
+                }
+            }
+
+        }
+
+
 
     }
 }
