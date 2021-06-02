@@ -12,42 +12,45 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+
         Scanner scanner = new Scanner(System.in);
 
         int[] array = new int[10];
 
-        for (int i=0; i< 10; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.println("Введите число");
             array[i] = scanner.nextInt();
             System.out.println(array[i]);
 
         }
 
-        for (int i=0; i< 10; i++) {
+        for (int i = 0; i < 10; i++) {
 
-            System.out.print(array[i] +" ");
+            System.out.print(array[i] + " ");
 
         }
         System.out.println("");
 
-        //  int result =0;
-        int sequence =1;
-        int sequenceMax =0;
 
-        for (int i=0; i< array.length-1; i++) {
+        int sequence = 1;
+        int sequenceMax = 0;
 
-            //  sequence1 += massiv[i];
-            if (array[i] == array[i+1]) {sequence ++;
-            }
-            else
-            {  if (sequenceMax<sequence)
-            {sequenceMax=sequence; sequence=1;
-            }
-            }
+        for (int i = 0; i < array.length - 1; i++) {
 
+
+            if (array[i] == array[i + 1]) {
+                sequence++;
+            } else {
+                if (sequenceMax < sequence) {
+                    sequenceMax = sequence;
+                }
+                sequence = 1;
+            }
         }
-        System.out.println(sequenceMax);
 
+
+        System.out.println(sequenceMax);
 
     }
 }
