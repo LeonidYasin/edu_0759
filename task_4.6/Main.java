@@ -19,6 +19,14 @@ public class Main {
         System.out.println("Мама Алексея: "+alex.getMother().getName());
         System.out.println("Бабушка Гоши: "+gosha.getMother().getMother().getName());
 
+        System.out.println("Меня зовут "+ gosha.getName());
+        System.out.println("Имя моей мамы: "+ gosha.getMother().getName());
+        System.out.println("Имя моего папы: "+ gosha.getFather().getName());
+        System.out.println("У меня две бабушки, бабушка " + gosha.getMother().getMother().getName()
+                + " и " + gosha.getFather().getMother().getName());
+        System.out.println("У меня два деда, деда "+ gosha.getFather().getFather().getName()
+                + " и " + gosha.getMother().getFather().getName());
+
     }
 }
 
@@ -48,5 +56,9 @@ class Person{
     public void setHp(int hp){
         if (this.hp+hp>100) this.hp = 100;
         else this.hp = this.hp + hp;
+    }
+
+    public Person getFather() {
+        return father;
     }
 }

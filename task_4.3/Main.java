@@ -15,7 +15,9 @@
 
 public class Main {
     public static void main(String[] args) {
-
+        Cat cat1 = new Cat(10, 10, 50);
+        Cat cat2 = new Cat(1, 10, 30);
+        System.out.println("Бой cat1 сильнее = "+ cat1.fight(cat2));
     }
 }
 
@@ -24,10 +26,21 @@ class Cat {
     public int weight;
     public int strength;
 
-    public Cat() {
+    public Cat(int age,int weight,int strength) {
+        this.age = age;
+        this.weight = weight;
+        this.strength = strength;
     }
 
+
+
     public boolean fight(Cat anotherCat) {
-        //напишите тут ваш код
+
+        int criteria = 0;
+        if (age > anotherCat.age) criteria++; else criteria--;
+        if (weight > anotherCat.weight) criteria++; else criteria --;
+        if (strength > anotherCat.strength) criteria++; else criteria --;
+        return criteria>0;
+
     }
 }

@@ -15,10 +15,31 @@
 public class Main {
     public static void main(String[] args) {
 
+        Dog dog = new Dog();
+        dog.setName("Жучка");
+        dog.setAge(5);
+        System.out.println("Собака по имени " +dog.getName() + " возраст "+dog.getAge() + " лет");
     }
 }
 
-public class Dog {
+class Dog {
     //напишите тут ваш код
-}
+    private String name = "не установлено";
+    private int age = 0;
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
